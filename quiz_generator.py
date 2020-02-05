@@ -76,5 +76,6 @@ def Quiz_generator(input_file):
         data = data[4:]
     return quiz_list,len(quiz_list)
 
-quizzes,no_of_quiz = Quiz_generator('1.txt')
-print(no_of_quiz)
+file_name = input("please enter the input file name:")
+quizzes,no_of_quiz = Quiz_generator(file_name)
+print("Valid quizzes generated:",no_of_quiz)
