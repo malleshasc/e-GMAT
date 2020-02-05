@@ -1,12 +1,6 @@
-Question:
-Given a pool of n questions  questions generate as many quizzes as possible  and print the count 
+Instructions: program written in Python 3 
 
-Conditions:
-    • Each question belongs to any one of the 6 tags - tag1, tag2 ......tag6 
-    • Each question belongs to any one of the difficulty level - EASY, MEDIUM or HARD 
-    
-Criteria to generate a Quiz:
-    • 1 question from each tag 
-    • 2 questions from each difficulty level 
-    • 10 questions per quiz
-    • Questions cannot be repeated across quizzes         
+1. Paste the input file to pythonpath(pythonpath directory or same directory as quiz_generator.py file)
+2. Download the file quiz_generator.py, open terminal/cmd in the download directory and run thr command "python3 quiz_generator.py"
+3. After executing the script it asks for input file, enter the input file name and hit enter
+4. It prints out number of quizzes generated
