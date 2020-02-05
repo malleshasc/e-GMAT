@@ -1,13 +1,12 @@
-
+#Quiz_generator Function generate the quizzes as per given conditions
 def Quiz_generator(input_file):
+    #read the file contetnts to list using readlines method
     with open(input_file, 'r')as f:
         data = f.readlines()
-#data = ''' Q1 | EASY | tag1'''
-
+    #segregate the data as per difficulty level
     easy_q = []
     med_q = []
     hard_q = []
-    
     for i in data:
         if 'EASY' in i:
             easy_q.append(i)
@@ -15,12 +14,11 @@ def Quiz_generator(input_file):
             med_q.append(i)
         elif 'HARD' in i:
             hard_q.append(i)
-        
-    n = len(data)//10
+    #quiz_list will contain all possible quizzes
     quiz_list = []
     a = ['Tag1','Tag2','Tag3','Tag4','Tag5','Tag6']
-    
-    while len(quiz_list) < n:  
+    #while loop executes till it generates maximum possible quizzes with 6 question per quiz
+    while len(quiz_list) < len(data)//10:  
         t1,t2,t3,t4,t5,t6 = False,False,False,False,False,False       
         quiz  = []  
         x = 0
@@ -65,17 +63,19 @@ def Quiz_generator(input_file):
                 x+=1
             if x ==6 :
                 break
-                  
-        # At this point quiz list has 6 questions in it, append it to quiz list 
         quiz_list.append(quiz)
-        #shuffle a
         a = a[2:] + a[:2]
+    '''                     
+    At this point each quiz in quiz_list has 6 questions.
+    Randomly append the remaining questions to each quiz (4 questions each)
+    so the total number of questions will become 10 per quiz
+    and return quiz_list, number of quizzes generated
+    '''
     data = list(set(easy_q+med_q+hard_q))
     for i in quiz_list:
         i.extend(data[:4])
         data = data[4:]
     return quiz_list,len(quiz_list)
-
 file_name = input("please enter the input file name:")
 quizzes,no_of_quiz = Quiz_generator(file_name)
 print("Valid quizzes generated:",no_of_quiz)
