@@ -4,3 +4,6 @@ Instructions: program written in Python 3
 2. Download the file quiz_generator.py, open terminal/cmd in the download directory and run thr command "python3 quiz_generator.py"
 3. After executing the script it asks for input file, enter the input file name and hit enter
 4. It prints out number of quizzes generated
+
+or
+1. goto  https://repl.it/@malleshasc/e-Gmat-1 and click on run
