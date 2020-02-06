@@ -6,4 +6,4 @@ Instructions: program written in Python 3
 4. It prints out number of quizzes generated
 
 or
-1. goto  https://repl.it/@malleshasc/e-Gmat-1 and click on run
+1. goto  https://repl.it/@malleshasc/e-Gmat and click on run
